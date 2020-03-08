@@ -1,0 +1,107 @@
+% Created 2020-01-07 Tue 14:11
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Shawn Li}
+\date{\today}
+\title{COMPSCI 4F03 Class Notes}
+\hypersetup{
+ pdfauthor={Shawn Li},
+ pdftitle={COMPSCI 4F03 Class Notes},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.3 (Org mode 9.2.6)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{Introduction}
+\label{sec:orgd2d918e}
+\subsection{How to handle a large complex task?}
+\label{sec:orgbe5ac55}
+\subsubsection{Sequential}
+\label{sec:org0bee5ae}
+One person works on different parts of the task.
+\subsubsection{Parallel}
+\label{sec:org5f3d317}
+A number of person work on different parts, that are combined to complete the task.
+\begin{enumerate}
+\item Advantages of second approach
+\label{sec:orgb7f0917}
+\begin{enumerate}
+\item Same job in less time.
+\item Much bigger jobs can be handled in reasonable time.
+\end{enumerate}
+\item Presumptions of second approach
+\label{sec:org2b48037}
+\begin{enumerate}
+\item There will be contension.
+\item Because of the contension, there have to be communication.
+\item Consequently, in real world, the ideal result would be not be possible, because communication
+and resolving contension will need time, however, the improvements are significent.
+\item Diminishingr returns: as more workers/threads are added, the benifit of each worker/thread added
+will be reducing, to a certain point the benifits are almost zero.
+\end{enumerate}
+\end{enumerate}
+\subsubsection{Distributed parallelism}
+\label{sec:org92a86b2}
+Separate memories to reduce contension, but communication will be increasing.
+\begin{enumerate}
+\item Load balancing
+\label{sec:orge86e239}
+Work load should be roughly the same for each worker/processors, but communication is still necessary.
+\end{enumerate}
+\subsection{Parallel Programming}
+\label{sec:org835798f}
+Bigger problems can be solved if more than one computers are used in parallel.
+\begin{enumerate}
+\item Sequential programming will not work. Mature tools and compilers are not available.
+\item Locations of processors can be different.
+\begin{enumerate}
+\item Inside a single enclosure.
+\item A number of computers connected together.
+\end{enumerate}
+\item Different interconnection methods can be used.
+\begin{enumerate}
+\item Direct connections.
+\item Ethernet.
+\end{enumerate}
+\end{enumerate}
+\subsubsection{Alternatives}
+\label{sec:orgfbe957b}
+Very fast single processor computers with large memory bandwith. It is more familiar with existing technologies.
+But it is very expensive, gives out a lot of
+ heat. Also, the performance of a single CPU eventually will reach its limit.
+\subsubsection{Software considerations}
+\label{sec:org9e8ef46}
+\begin{enumerate}
+\item How to decompose a program into seperate independent parts.
+\item Parrellel algorithms.
+\item Operating system support.
+\end{enumerate}
+\subsubsection{Different parallel programming models.}
+\label{sec:orgb3e65f3}
+\begin{enumerate}
+\item Shared memory
+\item Message passing
+\item Instruction level parallelism
+\item Multithreading
+\item Data parallelism
+\item Hybrid systems
+\end{enumerate}
+\end{document}

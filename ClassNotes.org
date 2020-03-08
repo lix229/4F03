@@ -1,0 +1,48 @@
+#+Title: COMPSCI 4F03 Class Notes
+#+Author: Shawn Li
+
+* Introduction
+** How to handle a large complex task?
+*** Sequential
+One person works on different parts of the task.
+*** Parallel
+A number of person work on different parts, that are combined to complete the task.
+**** Advantages of second approach
+1. Same job in less time.
+2. Much bigger jobs can be handled in reasonable time.
+**** Presumptions of second approach
+1. There will be contension.
+2. Because of the contension, there have to be communication.
+3. Consequently, in real world, the ideal result would be not be possible, because communication
+ and resolving contension will need time, however, the improvements are significent.
+4. Diminishingr returns: as more workers/threads are added, the benifit of each worker/thread added
+ will be reducing, to a certain point the benifits are almost zero.
+*** Distributed parallelism
+Separate memories to reduce contension, but communication will be increasing.
+**** Load balancing
+Work load should be roughly the same for each worker/processors, but communication is still necessary.
+** Parallel Programming
+Bigger problems can be solved if more than one computers are used in parallel.
+1. Sequential programming will not work. Mature tools and compilers are not available.
+2. Locations of processors can be different.
+    1. Inside a single enclosure.
+    2. A number of computers connected together.
+3. Different interconnection methods can be used.
+    1. Direct connections.
+    2. Ethernet.
+*** Alternatives
+Very fast single processor computers with large memory bandwith. It is more familiar with existing technologies.
+But it is very expensive, gives out a lot of
+ heat. Also, the performance of a single CPU eventually will reach its limit.
+*** Software considerations
+1. How to decompose a program into seperate independent parts.
+2. Parrellel algorithms.
+3. Operating system support.
+*** Different parallel programming models.
+1. Shared memory
+2. Message passing
+3. Instruction level parallelism
+4. Multithreading
+5. Data parallelism
+6. Hybrid systems
+

@@ -1,0 +1,90 @@
+% Created 2020-01-31 Fri 20:44
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Shawn Li, lix229}
+\date{\today}
+\title{CS4F03 ASSIGNMENT 1}
+\hypersetup{
+ pdfauthor={Shawn Li, lix229},
+ pdftitle={CS4F03 ASSIGNMENT 1},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.3 (Org mode 9.3.2)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\newpage
+\section{Question 1}
+\label{sec:org87f0e4b}
+\subsection{Part A}
+\label{sec:orgc9da988}
+Computer\textsubscript{A}: \\
+2 \texttimes{} 40\% + 3 \texttimes{} 25\% + 3 \texttimes{} 25\% + 5 \texttimes{} 10\% \\
+= 0.8 + 0.75 + 0.75 + 0.5 \\
+= 2.8 \\
+Computer\textsubscript{B}: \\
+2 \texttimes{} 40\% + 2 \texttimes{} 25\% + 3 \texttimes{} 25\% + 4 \texttimes{} 10\% \\
+= 0.8 + 0.5 + 0.75 + 0.4 \\
+= 2.45
+\subsection{Part B}
+\label{sec:orgaca6a4a}
+T\textsubscript{A} = CPI\textsubscript{A} \texttimes{} I \textdiv{} CLOCKRATE\textsubscript{A} = 0.0056I \\
+T\textsubscript{B} = 2.45 \textdiv{} 600 \(\approx\) 0.00408I \\
+\(\because\) T\textsubscript{B} < T\textsubscript{A} \\
+\(\therefore\) T\textsubscript{B} is faster than T\textsubscript{A} by about 37\%.
+\subsection{Part C}
+\label{sec:org0a1bd2b}
+MIPS = CLOCKRATE \textdiv{} (CPI \texttimes{} 10\textsuperscript{6}) \\
+MIPS\textsubscript{A} = 500 \textdiv{} (2.8 \texttimes{} 10\textsuperscript{6}) \(\approx\) 0.178 \texttimes{} 10\textsuperscript{-3}\\
+MIPS\textsubscript{B} = 600 \textdiv{} (2.45 \texttimes{} 10\textsuperscript{6}) \(\approx\) 0.245 \texttimes{} 10\textsuperscript{-3}
+\section{Question 2}
+\label{sec:orgd6c2e43}
+\subsection{Part A}
+\label{sec:org3e24e9e}
+15000 \texttimes{} 5 \textdiv{} (15000 - 1 + 5) = 4.999
+\subsection{Part B}
+\label{sec:orgba30943}
+(15000 - 1 + 5) \textdiv{} (5 + (15000-4) \textdiv{} 4) = 4
+\section{Question 3}
+\label{sec:org8d31c46}
+Out of Order execution is an execution model in which instructions can be executed in an order that is potentially different from the program order.
+At the same time, the behaviour of the program is expected as the same as intuitively expected. \\
+
+Speculative execution, is an execution model in which instructions can be fetched and enter the pipeline and even begin execution without 
+even knowing for sure that they will indeed be required to execute (according to the control flow of the program).
+\section{Question 4}
+\label{sec:org6cc34c4}
+\subsection{Part A}
+\label{sec:org7728146}
+6ns \texttimes{} 80\% +17ns \texttimes{} 15\% +4\% \texttimes{} 180ns +16000ns  \texttimes{}  1\% = 174.55ns
+\subsection{Part B}
+\label{sec:orgbd82c56}
+6 \texttimes{} 63\% +17 \texttimes{} 10\% +180 \texttimes{} 20\% +16000 \texttimes{} 7\% = 1161.48ns
+\section{Question 5}
+\label{sec:org151a0d9}
+\subsection{Part A}
+\label{sec:orgd069227}
+Ideally, the output of 20 stage pipeline would be higher than the 10 stage pipeline. However, as misprediction exists, 20 stage pipeline would take twice the time as 10 stage pipeline does to restart.
+Therefore, considering that we don’t know if there is a misprediction, it would be an unfair comparison.
+\subsection{Part B}
+\label{sec:orgb0bc944}
+T = 1 \textdiv{} 4GHZ = 0.25ns \\
+Corresponding clocks: 7 \textdiv{} 0.25 = 28 Clocks \\
+A five stage pipeline retires 1 instruction per clock cycles after 4 clock cycles, therefore, it will retire 24 instructions in 28 clocks.
+\end{document}

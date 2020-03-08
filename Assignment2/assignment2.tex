@@ -1,0 +1,88 @@
+% Created 2020-02-09 Sun 22:27
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Shawn Li, lix229}
+\date{\today}
+\title{CS4F03 ASSIGNMENT 2}
+\hypersetup{
+ pdfauthor={Shawn Li, lix229},
+ pdftitle={CS4F03 ASSIGNMENT 2},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.3 (Org mode 9.3.2)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\newpage
+
+\section{Question 1}
+\label{sec:org75975a8}
+
+\subsection{Part A}
+\label{sec:org3b25f8b}
+\emph{2-D mesh}：\\
+ 	diameter: 2 \texttimes{} (\sqrt{36}-1) = 10 \\
+ 	width: \sqrt{36} = 6 \\
+\emph{2-D torus}: \\
+	diameter: 2 \texttimes{} (\sqrt{36}/2) = 6 \\
+	width: 2 \texttimes{} \sqrt{36} = 12\\
+\emph{6-D cube} : \\
+	diameter: 6\\
+	width: 18\\
+
+The 6-D hypercube is the best alternative, since when we design a high performance multicomputer platform, we expect lower diameter and higher width so that the parallel computer can require communication  between pairs of nodes with costing less time and require a large amount of data at one time.
+
+\subsection{Part B}
+\label{sec:org906425f}
+The current address X is 101010 for nodes 42 and the destination address Y is 001101 for node 13.
+\begin{enumerate}
+\item Exclusive OR: 100111
+\item The most significent 1-bit: 6th bit.
+\item Negate the 6th bit address: 001010.
+\item Exclusive OR: 000111
+\item The most significent 1-bit: 3rd bit
+\item Negate the 3rd bit: 001110
+\item Exclusive OR: 000011
+\item The most significent 1-bit: 2nd bit
+\item Negate the 2nd bit: 001100
+\item Exclusive OR: 000001
+\item The most siginicent 1-bit: 1st bit
+\item Exclusive OR: 001101
+\end{enumerate}
+
+\section{Question 2}
+\label{sec:orgf755713}
+\subsection{Data size varies}
+\label{sec:org5229c38}
+s + np = 0.12 + 0.88 \texttimes{} 56 = 49.4 \\
+49.4 \texttimes{} 2.5 = 123.5Gflops
+\subsection{Data size fixed}
+\label{sec:org7ca0f5c}
+1/(0.12 + 0.888/n) = n/(0.12n + 0.88) =  7.36
+7.36 \texttimes{} 2.5 = 18.42Gflops
+
+\section{Question 3}
+\label{sec:orgc36ad8c}
+\begin{enumerate}
+\item 00 output port0 of  A1
+\item 10 output  port2 of B1
+\item 11 output port port3 of C2
+\item Arrive at Node 9
+\end{enumerate}
+\end{document}

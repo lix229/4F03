@@ -1,0 +1,53 @@
+#+TITLE: CS4F03 ASSIGNMENT 2
+#+AUTHOR: Shawn Li, lix229
+
+\newpage
+
+* Question 1
+
+** Part A
+\emph{2-D mesh}：\\
+ 	diameter: 2 \times (\sqrt{36}-1) = 10 \\
+ 	width: \sqrt{36} = 6 \\
+\emph{2-D torus}: \\ 
+	diameter: 2 \times (\sqrt{36}/2) = 6 \\
+	width: 2 \times \sqrt{36} = 12\\
+\emph{6-D cube} : \\
+	diameter: 6\\
+	width: 18\\
+
+The 6-D hypercube is the best alternative, since when we design a high performance multicomputer platform, we expect lower diameter and higher width so that the parallel computer can require communication  between pairs of nodes with costing less time and require a large amount of data at one time.
+
+** Part B
+The current address X is 101010 for nodes 42 and the destination address Y is 001101 for node 13.
+1. Exclusive OR: 100111
+2. The most significent 1-bit: 6th bit.
+3. Negate the 6th bit address: 001010.
+4. Exclusive OR: 000111
+5. The most significent 1-bit: 3rd bit
+6. Negate the 3rd bit: 001110
+7. Exclusive OR: 000011
+8. The most significent 1-bit: 2nd bit
+9. Negate the 2nd bit: 001100
+10. Exclusive OR: 000001
+11. The most siginicent 1-bit: 1st bit
+12. Exclusive OR: 001101
+
+* Question 2
+** Data size varies
+s + np = 0.12 + 0.88 \times 56 = 49.4 \\
+49.4 \times 2.5 = 123.5Gflops
+** Data size fixed
+1/(0.12 + 0.888/n) = n/(0.12n + 0.88) =  7.36
+7.36 \times 2.5 = 18.42Gflops
+
+* Question 3
+1. 00 output port0 of  A1
+2. 10 output  port2 of B1
+3. 11 output port port3 of C2
+4. Arrive at Node 9
+
+
+
+
+

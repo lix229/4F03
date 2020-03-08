@@ -1,0 +1,47 @@
+#+TITLE: CS4F03 ASSIGNMENT 1
+#+AUTHOR: Shawn Li, lix229
+
+\newpage
+* Question 1
+** Part A
+Computer_A: \\
+2 \times 40% + 3 \times 25% + 3 \times 25% + 5 \times 10% \\
+= 0.8 + 0.75 + 0.75 + 0.5 \\
+= 2.8 \\ 
+Computer_B: \\
+2 \times 40% + 2 \times 25% + 3 \times 25% + 4 \times 10% \\
+= 0.8 + 0.5 + 0.75 + 0.4 \\
+= 2.45
+** Part B
+T_A = CPI_A \times I \div CLOCKRATE_A = 0.0056I \\
+T_B = 2.45 \div 600 \approx 0.00408I \\
+\because T_B < T_A \\
+\therefore T_B is faster than T_A by about 37%.
+** Part C
+MIPS = CLOCKRATE \div (CPI \times 10^6) \\
+MIPS_A = 500 \div (2.8 \times 10^6) \approx 0.178 \times 10^-3\\
+MIPS_B = 600 \div (2.45 \times 10^6) \approx 0.245 \times 10^-3
+* Question 2
+** Part A
+15000 \times 5 \div (15000 - 1 + 5) = 4.999
+** Part B
+(15000 - 1 + 5) \div (5 + (15000-4) \div 4) = 4
+* Question 3
+Out of Order execution is an execution model in which instructions can be executed in an order that is potentially different from the program order.
+At the same time, the behaviour of the program is expected as the same as intuitively expected. \\
+
+Speculative execution, is an execution model in which instructions can be fetched and enter the pipeline and even begin execution without 
+even knowing for sure that they will indeed be required to execute (according to the control flow of the program).
+* Question 4
+** Part A
+6ns \times 80% +17ns \times 15% +4% \times 180ns +16000ns  \times  1% = 174.55ns
+** Part B
+6 \times 63% +17 \times 10% +180 \times 20% +16000 \times 7% = 1161.48ns
+* Question 5
+** Part A
+Ideally, the output of 20 stage pipeline would be higher than the 10 stage pipeline. However, as misprediction exists, 20 stage pipeline would take twice the time as 10 stage pipeline does to restart.
+Therefore, considering that we don’t know if there is a misprediction, it would be an unfair comparison.
+** Part B
+T = 1 \div 4GHZ = 0.25ns \\
+Corresponding clocks: 7 \div 0.25 = 28 Clocks \\
+A five stage pipeline retires 1 instruction per clock cycles after 4 clock cycles, therefore, it will retire 24 instructions in 28 clocks.
