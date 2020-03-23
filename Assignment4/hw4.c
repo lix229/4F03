@@ -15,10 +15,14 @@ int main(int argc, char const *argv[])
     w = ImageWidth(file);
     Image* out = ImageCreate(w, h);
     // printf("%d,%d",h,w);
-
-    #pragma omp parallel for num_threads(NUM_THREADS) shared(out) 
-        for (int i = 0; i <= h-1;i++) {
-            for (int k = 0; k<=w-1;k++){
+    int block_height = h/(NUM_THREADS-1);
+    #pragma omp parallel for num_threads(NUM_THREADS) shared(out)
+    {   
+        int my_rank = omp_get_thread_num();
+        // for (int i = 0; i <= h-1;i++) {
+        //     for (int k = 0; k<=w-1;k++){
+        for(int k = 0; k < w; k++){
+            for(int i = my_rank*block_height; i < h && i < (my_rank+1)*block_height; i++){
                 printf("Working on %d, %d\n", k, i);
                 int left, right, up, down;
                 left = k - r;
@@ -52,6 +56,7 @@ int main(int argc, char const *argv[])
                 }
                 printf("Done.\n");
             }
+        }
     }
     ImageWrite(out, argv[3]);
     return 0;
